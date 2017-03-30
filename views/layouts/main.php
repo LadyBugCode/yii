@@ -3,11 +3,13 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use yii\helpers\Html;
-use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
-use macgyer\yii2materializecss\widgets\NavBar;
+use macgyer\yii2materializecss\lib\Html;
 use macgyer\yii2materializecss\widgets\Nav;
+use macgyer\yii2materializecss\widgets\NavBar;
+use macgyer\yii2materializecss\widgets\Breadcrumbs;
+use macgyer\yii2materializecss\widgets\Alert;
+use app\assets\AppAsset;
+
 
 AppAsset::register($this);
 ?>
@@ -70,13 +72,32 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+<footer class="footer page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    &copy; My Company <?= date('Y') ?>
+                    <?= Yii::powered() ?>
+                </div>
+            </div>
+        </footer>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>
